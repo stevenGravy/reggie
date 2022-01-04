@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <!--
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    -->
+    <link href="./styles.css" rel="stylesheet">
+    <link href="./button.css" rel="stylesheet">
+    <title>Reg Exp</title>
+
+  </head>
+  <body>
+
+
+    <div id="learnregularexpression" style="visibility: hidden;">
+
+      <div id="learn-1"> 
+      <h3>Let's have some fun with regular expressions that lets you do simple to very complex string searches. </h3>
+
+      <div>First we have our sample data</div>
+
+      <div><input  id="learn1data" value="The Zorgons have attacked our starbase" /></div>
+
+      <div>Let's try to find if attack and zorgon is in this</div>
+
+      <div>Expression</div>
+
+        <div><input class="expressioninput" id="learn-1-expression" value="[Aa]ttack.*[zZ]orgon|[zZ]orgon.*[Aa]ttack" /></div>
+      </div>
+
+      <div>
+        Here we're trying to find if "attack .. zorgon" or "zorgon..attack" occurs. Let's try to run this.
+        <button onclick="runLearn1()">Find Attack Zorgon</button>
+
+      </div>
+      <div>
+        Result <span id="learn1result"></span>
+      </div>
+
+
+
+
+      </div>
+
+
+    </div>
+
+
+  <div id="expressionexample" >
+    <div class="topdiv" >
+      <div>Incoming data <input id="testdata" class="expressioninput" type="text"  value="development"/></div> 
+      
+      <div> Expression <input id="regexp" class="expressioninput"></input> <button id="runthisbutton" onclick="runCustomExp()" >run expression</button>  </div>
+      <div> Search result: <span id="outputdata"></span>  </div>
+    
+
+    
+     
+    
+  </div>
+  <div class="explaindiv">
+ List of elements to search for (Ex: dev or testing or production)
+
+  </div>
+  <div>
+
+    <div>
+    <table id="tableelements">
+      <tr>
+<th>#</th><th>element</th>
+</tr>
+
+  <tr id="1row"><td>1</td><td><input id="search1" type="text" class="expressioninput"/>
+    <span class="dropdown">
+      <button onclick="buttonShow('search1dropdown','myDropdown','regexp','search1')" class="dropbtn">Reg Exp Options</button>
+      <span id="search1dropdown" class="dropdown-content"></span>
+    </span>
+  
+  
+  </td><td><input id="exactmatch1" type="checkbox"  checked /><span class="checkboxelements">Exact Match</span></td><td><input id="checkboxelements" type="checkbox" value="true"  /><span class="checkboxelements">Case Sensitive</span></td></tr>
+  <tr id="2row"><td>2</td><td><input id="search2" type="text" class="expressioninput"/></td><td><input id="exactmatch2" type="checkbox"  checked /><span class="checkboxelements">Exact Match</span></td><td><input id="checkboxelements" type="checkbox" value="true"  /><span class="checkboxelements">Case Insensitive</span></td></tr>
+
+    </table>
+  </div>
+  <div>
+    <div> <button type="button"  onclick="populateRegExp()">Create Regular Expression</button> <button type="button"  onclick="testRegExps()">run</button></div>
+    <div>  <button type="button" onclick="addRow()">add row</button></div>
+  </div>
+  </div>
+
+  </div>
+    <!-- JSS -->
+    <script src="./renderer.js"></script>
+    <script src="./regexp.js"></script>
+    <script src="./store.js"></script>
+    <script src="./utilities.js"></script>
+    <script src="./button.js"></script>
+  </body>
+</html>

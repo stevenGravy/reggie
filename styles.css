@@ -1,0 +1,30 @@
+
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    background-color: black;
+    color: greenyellow;
+    text-align: left;
+  }
+
+.topdiv {
+   border-style: solid;
+   border-color: green;
+
+  }
+
+  .expressioninput{
+      width: 300px;
+  }
+
+  .checkboxelements {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    color: white;
+   }
+  .explaindiv {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+    color: white;
+   }
