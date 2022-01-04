@@ -2,6 +2,12 @@
 
 Reggie is a learning tool and helper for regular expression usage.
 
+# Starting
+
+```bash
+npm install
+npm start
+```
 
 # Status
 
